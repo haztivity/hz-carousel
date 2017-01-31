@@ -36,8 +36,8 @@ export class HzCarousel extends ResourceController {
     protected _visitedCount:number;
     protected static readonly _SLICK_DEFAULTS = {
         adaptiveHeight:true,
-        dots:true,
-        infinite:false
+        infinite:false,
+        initialSlide:0
     };
 
     /**
@@ -85,7 +85,7 @@ export class HzCarousel extends ResourceController {
     protected _onSlickInit(e, slick) {
         let instance = e.data.instance;
         instance._slickInstance = slick;
-
+        slick.goTo(slick.options.initialSlide);
     }
 
     /**
