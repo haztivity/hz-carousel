@@ -3,6 +3,7 @@
         "module": "system",
         "target": "es5",
         "sourceMap": true,
+        "inlineSourceMap": true,
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "typeRoots": [

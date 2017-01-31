@@ -19,6 +19,7 @@
     "@types/jquery": "^2.0.34",
     "@types/jqueryui": "^1.11.32",
     "@types/loglevel": "^1.4.29",
+    "@types/slick-carousel": "^1.6.31",
     "@types/string": "0.0.28",
     "autoprefixer": "^6.5.1",
     "commander": "^2.9.0",
@@ -58,8 +59,9 @@
       "lib": "src"
     },
     "dependencies": {
-      "@haztivity/core": "bitbucket:davinchi_finsi/core@^0.1.1",
-      "jquery": "npm:jquery@^3.1.1"
+      "@haztivity/core": "bitbucket:davinchi_finsi/core@^0.1.2",
+      "jquery": "npm:jquery@^3.1.1",
+      "slick-carousel": "npm:slick-carousel@^1.6.0"
     },
     "devDependencies": {
       "css": "github:systemjs/plugin-css@^0.1.32",
