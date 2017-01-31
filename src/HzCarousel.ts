@@ -34,6 +34,19 @@ export class HzCarousel extends ResourceController {
     protected _slickInstance: any;
     protected _slideState:ISlideState[];
     protected _visitedCount:number;
+    protected static readonly _SLICK_DEFAULTS = {
+        adaptiveHeight:true,
+        dots:true,
+        infinite:false
+    };
+
+    /**
+     * Recurso para el componente Slick
+     * @param _$
+     * @param _EventEmitterFactory
+     * @param _DataOptions
+     * @see https://github.com/kenwheeler/slick
+     */
     constructor(_$: JQueryStatic, _EventEmitterFactory: EventEmitterFactory, protected _DataOptions) {
         super(_$, _EventEmitterFactory);
     }
@@ -130,6 +143,8 @@ export class HzCarousel extends ResourceController {
             this._$element.slick("unslick");
         }
         let slickOptions = this._DataOptions.getDataOptions(this._$element, HzCarousel.SLICK_PREFIX);
+        slickOptions = $.extend(true,{},HzCarousel._SLICK_DEFAULTS,slickOptions);
+        //see the page of slick to know all posible options
         this._slickOptions = slickOptions;
         this._$element.slick(slickOptions);
         this._createState();
