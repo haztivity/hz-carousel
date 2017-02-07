@@ -3,10 +3,10 @@
  * Copyright Davinchi. All Rights Reserved.
  */
 import {PageFactory, PageRegister, PageController} from "@haztivity/core/index";
-import template from "./6611.html!text";
+import template from "./page.html!text";
 import {HzCarousel} from "../../../../../src/HzCarousel";
 import "../../../../../src/assets/styles/hz-carousel.structure.css!";
-let page: PageRegister = PageFactory.createPage(
+export let page: PageRegister = PageFactory.createPage(
     {
         name: "6611",
         resources: [
@@ -45,4 +45,3 @@ page.on(
         console.log(`${pageController.options.name} destroy`);
     }
 );
-export {page as page6611};
