@@ -1,6 +1,6 @@
 {
   "name": "@haztivity/hzcarousel",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Recurso de carousel",
   "main": "index.js",
   "module": "index.js",
@@ -59,7 +59,7 @@
       "lib": "src"
     },
     "dependencies": {
-      "@haztivity/core": "bitbucket:davinchi_finsi/core@^0.1.2",
+      "@haztivity/core": "bitbucket:davinchi_finsi/core@^0",
       "jquery": "npm:jquery@^3.1.1",
       "slick-carousel": "npm:slick-carousel@^1.6.0"
     },

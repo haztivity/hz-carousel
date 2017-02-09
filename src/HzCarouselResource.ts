@@ -27,8 +27,10 @@ export interface ISlideState{
 export class HzCarouselResource extends ResourceController {
     public static readonly NAMESPACE = "HzCarouselResource";
     public static readonly ON_SLICK_AFTER_CHANGE = `afterChange`;
+    public static readonly ON_SLICK_BEFORE_CHANGE = `beforeChange`;
     public static readonly ON_SLICK_INIT = "init";
     public static readonly ON_SLICK_REINIT = "reInit";
+    public static readonly CLASS_ACTIVED = "hz-carousel--actived";
     protected static readonly SLICK_PREFIX = "slick";
     protected _slickOptions: any;
     protected _slickInstance: any;
@@ -65,6 +67,11 @@ export class HzCarouselResource extends ResourceController {
     protected _assignEvents() {
         this._$element.off("." + HzCarouselResource.NAMESPACE)
             .on(
+                `${HzCarouselResource.ON_SLICK_BEFORE_CHANGE}.${HzCarouselResource.NAMESPACE}`,
+                {instance: this},
+                this._onSlickBeforeChange
+            )
+            .on(
                 `${HzCarouselResource.ON_SLICK_AFTER_CHANGE}.${HzCarouselResource.NAMESPACE}`,
                 {instance: this},
                 this._onSlickAfterChange
@@ -75,7 +82,14 @@ export class HzCarouselResource extends ResourceController {
                 this._onSlickInit
             );
     }
-
+    protected _onSlickBeforeChange(e,slick,currentIndex,newIndex){
+        let instance = e.data.instance;
+        //update the state of the dot if exists
+        if(slick.$dots){
+            let $dot = slick.$dots.children().eq(newIndex);
+            $dot.addClass(HzCarouselResource.CLASS_ACTIVED);
+        }
+    }
     /**
      * Invocado al inicializarse o actualizarse slick. Guarda la instancia de slick
      * @param e
