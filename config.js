@@ -10,16 +10,16 @@ System.config({
   },
 
   map: {
-    "@haztivity/core": "bitbucket:davinchi_finsi/core@0.3.0",
-    "css": "github:systemjs/plugin-css@0.1.32",
-    "jquery": "npm:jquery@3.1.1",
-    "json": "github:systemjs/plugin-json@0.2.3",
+    "@haztivity/core": "bitbucket:davinchi_finsi/core@0.5.0",
+    "css": "github:systemjs/plugin-css@0.1.29",
+    "jquery": "npm:jquery@3.2.1",
+    "json": "github:systemjs/plugin-json@0.3.0",
     "slick-carousel": "npm:slick-carousel@1.6.0",
     "text": "github:systemjs/plugin-text@0.0.9",
-    "typescript": "npm:typescript@2.2.0",
-    "bitbucket:davinchi_finsi/core@0.3.0": {
-      "bottlejs": "npm:bottlejs@1.5.0",
-      "jquery": "npm:jquery@3.1.1",
+    "typescript": "npm:typescript@2.2.2",
+    "bitbucket:davinchi_finsi/core@0.5.0": {
+      "bottlejs": "npm:bottlejs@1.6.0",
+      "jquery": "npm:jquery@3.2.1",
       "loglevel": "npm:loglevel@1.4.1",
       "string": "npm:string@3.3.3"
     },
@@ -102,7 +102,7 @@ System.config({
     "npm:bn.js@4.11.6": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0"
     },
-    "npm:bottlejs@1.5.0": {
+    "npm:bottlejs@1.6.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:browserify-aes@1.0.6": {
@@ -137,17 +137,18 @@ System.config({
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "randombytes": "npm:randombytes@2.0.3"
     },
-    "npm:browserify-sign@4.0.0": {
+    "npm:browserify-sign@4.0.4": {
       "bn.js": "npm:bn.js@4.11.6",
       "browserify-rsa": "npm:browserify-rsa@4.0.1",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
       "create-hmac": "npm:create-hmac@1.1.4",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "elliptic": "npm:elliptic@6.3.3",
+      "elliptic": "npm:elliptic@6.4.0",
       "inherits": "npm:inherits@2.0.1",
-      "parse-asn1": "npm:parse-asn1@5.0.0",
-      "stream": "github:jspm/nodelibs-stream@0.1.0"
+      "parse-asn1": "npm:parse-asn1@5.1.0",
+      "stream": "github:jspm/nodelibs-stream@0.1.0",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
     "npm:buffer-xor@1.0.3": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -177,7 +178,7 @@ System.config({
       "bn.js": "npm:bn.js@4.11.6",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "elliptic": "npm:elliptic@6.3.3"
+      "elliptic": "npm:elliptic@6.4.0"
     },
     "npm:create-hash@1.1.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -197,7 +198,7 @@ System.config({
     },
     "npm:crypto-browserify@3.11.0": {
       "browserify-cipher": "npm:browserify-cipher@1.0.0",
-      "browserify-sign": "npm:browserify-sign@4.0.0",
+      "browserify-sign": "npm:browserify-sign@4.0.4",
       "create-ecdh": "npm:create-ecdh@4.0.0",
       "create-hash": "npm:create-hash@1.1.2",
       "create-hmac": "npm:create-hmac@1.1.4",
@@ -220,11 +221,14 @@ System.config({
       "randombytes": "npm:randombytes@2.0.3",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
-    "npm:elliptic@6.3.3": {
+    "npm:elliptic@6.4.0": {
       "bn.js": "npm:bn.js@4.11.6",
-      "brorand": "npm:brorand@1.0.7",
+      "brorand": "npm:brorand@1.1.0",
       "hash.js": "npm:hash.js@1.0.3",
+      "hmac-drbg": "npm:hmac-drbg@1.0.0",
       "inherits": "npm:inherits@2.0.1",
+      "minimalistic-assert": "npm:minimalistic-assert@1.0.0",
+      "minimalistic-crypto-utils": "npm:minimalistic-crypto-utils@1.0.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
     "npm:evp_bytestokey@1.0.0": {
@@ -235,6 +239,12 @@ System.config({
     "npm:hash.js@1.0.3": {
       "inherits": "npm:inherits@2.0.1"
     },
+    "npm:hmac-drbg@1.0.0": {
+      "hash.js": "npm:hash.js@1.0.3",
+      "minimalistic-assert": "npm:minimalistic-assert@1.0.0",
+      "minimalistic-crypto-utils": "npm:minimalistic-crypto-utils@1.0.1",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
+    },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
@@ -243,12 +253,12 @@ System.config({
     },
     "npm:miller-rabin@4.0.0": {
       "bn.js": "npm:bn.js@4.11.6",
-      "brorand": "npm:brorand@1.0.7"
+      "brorand": "npm:brorand@1.1.0"
     },
     "npm:os-browserify@0.1.2": {
       "os": "github:jspm/nodelibs-os@0.1.0"
     },
-    "npm:parse-asn1@5.0.0": {
+    "npm:parse-asn1@5.1.0": {
       "asn1.js": "npm:asn1.js@4.9.1",
       "browserify-aes": "npm:browserify-aes@1.0.6",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -277,7 +287,7 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "create-hash": "npm:create-hash@1.1.2",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
-      "parse-asn1": "npm:parse-asn1@5.0.0",
+      "parse-asn1": "npm:parse-asn1@5.1.0",
       "randombytes": "npm:randombytes@2.0.3"
     },
     "npm:punycode@1.3.2": {
@@ -309,9 +319,9 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:slick-carousel@1.6.0": {
-      "jquery": "npm:jquery@3.1.1"
+      "jquery": "npm:jquery@3.2.1"
     },
-    "npm:source-map-support@0.4.11": {
+    "npm:source-map-support@0.4.14": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "child_process": "github:jspm/nodelibs-child_process@0.1.0",
@@ -320,7 +330,8 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.2",
       "querystring": "github:jspm/nodelibs-querystring@0.1.0",
-      "source-map": "npm:source-map@0.5.6"
+      "source-map": "npm:source-map@0.5.6",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.2"
     },
     "npm:source-map@0.5.6": {
       "process": "github:jspm/nodelibs-process@0.1.2"
@@ -336,11 +347,11 @@ System.config({
     "npm:timers-browserify@1.4.2": {
       "process": "npm:process@0.11.9"
     },
-    "npm:typescript@2.2.0": {
+    "npm:typescript@2.2.2": {
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
       "net": "github:jspm/nodelibs-net@0.1.2",
       "os": "github:jspm/nodelibs-os@0.1.0",
-      "source-map-support": "npm:source-map-support@0.4.11"
+      "source-map-support": "npm:source-map-support@0.4.14"
     },
     "npm:url@0.10.3": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

@@ -1,23 +1,14 @@
-(function (factory) {
-    if (typeof module === "object" && typeof module.exports === "object") {
-        var v = factory(require, exports);
-        if (v !== undefined) module.exports = v;
-    }
-    else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "./HzCarouselResource", "./HzCarouselResource"], factory);
-    }
-})(function (require, exports) {
-    "use strict";
-    /**
-     * @license
-     * Copyright Davinchi. All Rights Reserved.
-     */
-    var HzCarouselResource_1 = require("./HzCarouselResource");
-    exports.HzCarouselResource = HzCarouselResource_1.HzCarouselResource;
-    /**
-     * @deprecated
-     */
-    var HzCarouselResource_2 = require("./HzCarouselResource");
-    exports.HzCarousel = HzCarouselResource_2.HzCarouselResource;
-});
-//# sourceMappingURL=HzCarousel.js.map
+"use strict";
+/**
+ * @license
+ * Copyright Davinchi. All Rights Reserved.
+ */
+var HzCarouselResource_1 = require("./HzCarouselResource");
+exports.HzCarouselResource = HzCarouselResource_1.HzCarouselResource;
+/**
+ * @deprecated
+ */
+var HzCarouselResource_2 = require("./HzCarouselResource");
+exports.HzCarousel = HzCarouselResource_2.HzCarouselResource;
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJIekNhcm91c2VsLmpzIl0sInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuLyoqXG4gKiBAbGljZW5zZVxuICogQ29weXJpZ2h0IERhdmluY2hpLiBBbGwgUmlnaHRzIFJlc2VydmVkLlxuICovXG52YXIgSHpDYXJvdXNlbFJlc291cmNlXzEgPSByZXF1aXJlKFwiLi9IekNhcm91c2VsUmVzb3VyY2VcIik7XG5leHBvcnRzLkh6Q2Fyb3VzZWxSZXNvdXJjZSA9IEh6Q2Fyb3VzZWxSZXNvdXJjZV8xLkh6Q2Fyb3VzZWxSZXNvdXJjZTtcbi8qKlxuICogQGRlcHJlY2F0ZWRcbiAqL1xudmFyIEh6Q2Fyb3VzZWxSZXNvdXJjZV8yID0gcmVxdWlyZShcIi4vSHpDYXJvdXNlbFJlc291cmNlXCIpO1xuZXhwb3J0cy5IekNhcm91c2VsID0gSHpDYXJvdXNlbFJlc291cmNlXzIuSHpDYXJvdXNlbFJlc291cmNlO1xuIl0sImZpbGUiOiJIekNhcm91c2VsLmpzIn0=
