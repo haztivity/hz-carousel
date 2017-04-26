@@ -3,7 +3,6 @@
         "module": "commonjs",
         "target": "es5",
         "sourceMap": true,
-        "inlineSourceMap": true,
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "typeRoots": [
@@ -11,7 +10,6 @@
         ]
     },
     "exclude": [
-        "node_modules",
-        "jspm_packages"
+        "node_modules"
     ]
 }

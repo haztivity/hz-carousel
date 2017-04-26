@@ -1,0 +1,94 @@
+div
+    div.markdown-wrapper
+        :markdown-it(linkify)
+            ## hz-carousel
+            hz-carousel is an haztivity resource wrapper for [slick-carousel](http://kenwheeler.github.io/slick/)
+            ### Usage
+            1. Import @haztivity/hz-carousel
+            2. Add the HzCarouselResource to the page
+            3. Set data-hz-resource to the carousel wrapper
+            4. Add the slides as you like.
+            ### Simple use
+            #### template
+            ##### Pug
+            ```jade
+            div(data-hz-resource="HzCarousel")
+                div Slide 1 content
+                div Slide 2 content
+            ```
+            or
+            ##### HTML
+            ```xml
+            <div data-hz-resource="HzCarousel>
+                <div>Slide 1 content</div>
+                <div>Slide 2 content</div>
+            </div>
+            ```
+            #### page.ts
+            ```typescript
+            import {PageFactory, Page, PageController, PageRegister} from "@haztivity/core";
+            import template from "./page.pug";
+            import {HzCarouselResource} from "@haztivity/hz-carousel";
+            export let page: PageRegister = PageFactory.createPage(
+                {
+                    name: "6611",
+                    resources: [
+                        HzCarouselResource
+                    ],
+                    template: template
+                }
+            );
+            ```
+        div(data-hz-resource="HzCarousel")
+            div Slide 1 content
+            div Slide 2 content
+        :markdown-it(linkify)
+            ### Options
+            All the options of tooltipster excepts functions could be specified by attributes using:
+            ```jade
+                data-opt-slick-[option]=[value]
+            ```
+            If the option have multiple words, use dashes, for example adaptiveHeight will be adaptative-height
+
+            For example:
+            ```jade
+            div(data-hz-resource="HzCarousel"
+                data-opt-slick-arrows="false"
+                data-opt-slick-append-dots="true"
+                data-opt-slick-adaptative-height="true")
+                div Slide 1 content
+                div
+                    p Slide 2 content 1
+                    p Slide 2 content 2
+                    p Slide 2 content 3
+                    p Slide 2 content 4
+                    p Slide 2 content 5
+                    p Slide 2 content 6
+            ```
+            or
+            ##### HTML
+            ```html
+            <div data-hz-resource="HzCarousel data-opt-slick-arrows="false" data-opt-slick-dots="true" data-opt-slick-adaptative-height="true">
+                <div>Slide 1 content</div>
+                <div>
+                    <p>Slide 2 content 1</p>
+                    <p>Slide 2 content 2</p>
+                    <p>Slide 2 content 3</p>
+                    <p>Slide 2 content 4</p>
+                    <p>Slide 2 content 5</p>
+                    <p>Slide 2 content 6</p>
+                </div>
+            </div>
+            ```
+        div(data-hz-resource="HzCarousel"
+            data-opt-slick-arrows="false"
+            data-opt-slick-dots="true"
+            data-opt-slick-adaptative-height="true")
+            div Slide 1 content
+            div
+                p Slide 2 content 1
+                p Slide 2 content 2
+                p Slide 2 content 3
+                p Slide 2 content 4
+                p Slide 2 content 5
+                p Slide 2 content 6

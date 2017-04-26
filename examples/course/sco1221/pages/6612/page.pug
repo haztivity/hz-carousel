@@ -1,0 +1,40 @@
+div
+    div.markdown-wrapper
+        :markdown-it(linkify)
+            ### Events
+            The events are assigned through jquery like usuals
+            #### page.ts
+            ```typescript
+            page.on(
+                PageController.ON_RENDERED, null, (eventObject, $page: JQuery, pageController: PageController) => {
+                    //Find in the page the element that has slick
+                    $page.find('#myCarousel').on('beforeChange', (event, slick, currentSlide, nextSlide)=>{
+                        alert(`Slide changing, current: ${currentSlide}, next: ${nextSlide}`);
+                        console.log(`Slide changing, current: ${currentSlide}, next: ${nextSlide}`);
+                    });
+                }
+            );
+            ```
+        div#myCarousel(data-hz-resource="HzCarousel")
+            div Slide 1 content
+            div Slide 2 content
+        :markdown-it(linkify)
+            ### Methods
+            The same with the methods
+            #### page.ts
+            ```typescript
+            page.on(
+                PageController.ON_RENDERED, null, (eventObject, $page: JQuery, pageController: PageController) => {
+                    //Find in the page the element that has slick
+                    let $myCarousel2 = $page.find('#myCarousel2');
+                    $page.find('#myCarousel2Next').on('click', (event, slick, currentSlide, nextSlide)=>{
+                        //Infoke method
+                        $myCarousel2.slick("slickNext");
+                    });
+                }
+            );
+            ```
+        button#myCarousel2Next Call slickNext
+        div#myCarousel2(data-hz-resource="HzCarousel" data-opt-slick-arrows="false" data-opt-slick-infinite="true")
+            div Slide 1 content
+            div Slide 2 content
