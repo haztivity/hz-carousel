@@ -11,4 +11,4 @@ exports.HzCarouselResource = HzCarouselResource_1.HzCarouselResource;
  */
 var HzCarouselResource_2 = require("./HzCarouselResource");
 exports.HzCarousel = HzCarouselResource_2.HzCarouselResource;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSHpDYXJvdXNlbC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkh6Q2Fyb3VzZWwudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7O0dBR0c7QUFDSCwyREFBd0Q7QUFBaEQsa0RBQUEsa0JBQWtCLENBQUE7QUFDMUI7O0dBRUc7QUFDSCwyREFBc0U7QUFBOUQsMENBQUEsa0JBQWtCLENBQWMifQ==
+//# sourceMappingURL=HzCarousel.js.map
