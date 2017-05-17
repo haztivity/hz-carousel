@@ -1,30 +1,32 @@
 div
     div.markdown-wrapper
         :markdown-it(linkify)
-            ## hz-carousel
-            hz-carousel is an haztivity resource wrapper for [slick-carousel](http://kenwheeler.github.io/slick/)
-            ### Usage
-            1. Import @haztivity/hz-carousel
-            2. Add the HzCarouselResource to the page
-            3. Set data-hz-resource to the carousel wrapper
-            4. Add the slides as you like.
-            ### Simple use
-            #### template
-            ##### Pug
+            # hz-carousel
+            hz-carousel is an haztivity resource to create a carousel of images and/or contents.\
+            hz-carousel uses [slick-carousel](http://kenwheeler.github.io/slick/) under the hood.
+            
+            ## Dependencies
+            - JQuery
+            - slick-carousel
+            - haztivity/core
+            
+            ## Simple use
+            ### Pug
             ```jade
             div(data-hz-resource="HzCarousel")
                 div Slide 1 content
                 div Slide 2 content
             ```
             or
-            ##### HTML
-            ```xml
-            <div data-hz-resource="HzCarousel>
+            ### HTML
+            ```html
+            <div data-hz-resource="HzCarousel">
                 <div>Slide 1 content</div>
                 <div>Slide 2 content</div>
             </div>
             ```
-            #### page.ts
+            
+            ### page.ts
             ```typescript
             import {PageFactory, Page, PageController, PageRegister} from "@haztivity/core";
             import template from "./page.pug";
@@ -43,13 +45,13 @@ div
             div Slide 1 content
             div Slide 2 content
         :markdown-it(linkify)
-            ### Options
-            All the options of tooltipster excepts functions could be specified by attributes using:
+            ## Options
+            All the options of slick excepts functions could be specified by attributes using:
             ```jade
-                data-opt-slick-[option]=[value]
+            data-opt-slick-[option]=[value]
             ```
-            If the option have multiple words, use dashes, for example adaptiveHeight will be adaptative-height
-
+            If the option have multiple words, use dashes, for example use ```adaptative-height``` to set the ```adaptiveHeight``` option.
+            
             For example:
             ```jade
             div(data-hz-resource="HzCarousel"
@@ -68,7 +70,7 @@ div
             or
             ##### HTML
             ```html
-            <div data-hz-resource="HzCarousel data-opt-slick-arrows="false" data-opt-slick-dots="true" data-opt-slick-adaptative-height="true">
+            <div data-hz-resource="HzCarousel" data-opt-slick-arrows="false" data-opt-slick-dots="true" data-opt-slick-adaptative-height="true">
                 <div>Slide 1 content</div>
                 <div>
                     <p>Slide 2 content 1</p>
