@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://bitbucket.org/davinchi_finsi/hzcarousel"
+    "url": "https://github.com/haztivity/hz-carousel.git"
   },
   "author": "Davinchi",
-  "license": "ISC",
-  "homepage": "",
+  "license": "MIT",
+  "homepage": "https://github.com/haztivity/hz-carousel",
   "directories": {
     "typings": "src"
   },
