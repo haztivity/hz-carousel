@@ -1,6 +1,6 @@
 {
   "name": "@haztivity/hz-carousel",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "description": "Recurso de carousel",
   "main": "dist/HzCarousel.js",
   "module": "dist/HzCarousel.js",
@@ -18,8 +18,8 @@
   "directories": {
     "typings": "src"
   },
-  "types": "index.ts",
-  "typings": "index.ts",
+  "types": "src/HzCarousel.ts",
+  "typings": "src/HzCarousel.ts",
   "publishConfig": {
     "access": "public"
   },
