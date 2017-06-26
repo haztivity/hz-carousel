@@ -1,6 +1,6 @@
 {
   "name": "@haztivity/hz-carousel",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Recurso de carousel",
   "main": "dist/HzCarousel.js",
   "module": "dist/HzCarousel.js",
