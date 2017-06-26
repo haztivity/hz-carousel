@@ -1,5 +1,5 @@
 # hz-carousel
-hz-carousel is a resource to create carousel of images and/or contents.\
+hz-carousel is a resource to create a carousel of images and/or contents.\
 hz-carousel uses [slick-carousel](http://kenwheeler.github.io/slick/) under the hood.
 
 ## Dependencies
