@@ -9,7 +9,7 @@ import {
     EventEmitterFactory,
     ScormService,
     DataOptions
-} from "@haztivity/core/index";
+} from "@haztivity/core";
 import "slick-carousel";
 export interface ISlideState{
     visited:boolean;

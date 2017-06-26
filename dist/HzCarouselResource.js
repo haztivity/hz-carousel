@@ -20,7 +20,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @license
  * Copyright Davinchi. All Rights Reserved.
  */
-var index_1 = require("@haztivity/core/index");
+var core_1 = require("@haztivity/core");
 require("slick-carousel");
 var HzCarouselResource = HzCarouselResource_1 = (function (_super) {
     __extends(HzCarouselResource, _super);
@@ -123,7 +123,7 @@ var HzCarouselResource = HzCarouselResource_1 = (function (_super) {
             this._$element.slick("unslick");
         }
         var slickOptions = this._DataOptions.getDataOptions(this._$element, HzCarouselResource_1.SLICK_PREFIX);
-        slickOptions = index_1.$.extend(true, {}, HzCarouselResource_1._SLICK_DEFAULTS, slickOptions);
+        slickOptions = core_1.$.extend(true, {}, HzCarouselResource_1._SLICK_DEFAULTS, slickOptions);
         //see the page of slick to know all posible options
         this._slickOptions = slickOptions;
         this._$element.slick(slickOptions);
@@ -133,7 +133,7 @@ var HzCarouselResource = HzCarouselResource_1 = (function (_super) {
         return this._slickInstance;
     };
     return HzCarouselResource;
-}(index_1.ResourceController));
+}(core_1.ResourceController));
 HzCarouselResource.NAMESPACE = "HzCarouselResource";
 HzCarouselResource.ON_SLICK_AFTER_CHANGE = "afterChange";
 HzCarouselResource.ON_SLICK_BEFORE_CHANGE = "beforeChange";
@@ -147,12 +147,12 @@ HzCarouselResource._SLICK_DEFAULTS = {
     initialSlide: 0
 };
 HzCarouselResource = HzCarouselResource_1 = __decorate([
-    index_1.Resource({
+    core_1.Resource({
         name: "HzCarousel",
         dependencies: [
-            index_1.$,
-            index_1.EventEmitterFactory,
-            index_1.DataOptions
+            core_1.$,
+            core_1.EventEmitterFactory,
+            core_1.DataOptions
         ]
     })
 ], HzCarouselResource);
