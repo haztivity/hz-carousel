@@ -22,7 +22,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@haztivity/core");
 require("slick-carousel");
-var HzCarouselResource = HzCarouselResource_1 = (function (_super) {
+var HzCarouselResource = /** @class */ (function (_super) {
     __extends(HzCarouselResource, _super);
     /**
      * Recurso para el componente Slick
@@ -36,17 +36,26 @@ var HzCarouselResource = HzCarouselResource_1 = (function (_super) {
         _this._DataOptions = _DataOptions;
         return _this;
     }
+    HzCarouselResource_1 = HzCarouselResource;
     HzCarouselResource.prototype.init = function (options, config) {
         this._options = options;
         this._config = config;
+        this._eventEmitter = this._EventEmitterFactory.createEmitter();
         this._assignEvents();
         this.refresh();
+    };
+    HzCarouselResource.prototype._onPageShown = function (e) {
+        var instance = e.data.instance;
+        if (instance._slickInstance) {
+            instance._$element.slick("setPosition");
+        }
     };
     /**
      * Asigna los manejadores de eventos
      * @private
      */
     HzCarouselResource.prototype._assignEvents = function () {
+        this._eventEmitter.globalEmitter.on(core_1.PageController.ON_SHOWN, { instance: this }, this._onPageShown);
         this._$element.off("." + HzCarouselResource_1.NAMESPACE)
             .on(HzCarouselResource_1.ON_SLICK_BEFORE_CHANGE + "." + HzCarouselResource_1.NAMESPACE, { instance: this }, this._onSlickBeforeChange)
             .on(HzCarouselResource_1.ON_SLICK_AFTER_CHANGE + "." + HzCarouselResource_1.NAMESPACE, { instance: this }, this._onSlickAfterChange)
@@ -132,30 +141,30 @@ var HzCarouselResource = HzCarouselResource_1 = (function (_super) {
     HzCarouselResource.prototype.getInstance = function () {
         return this._slickInstance;
     };
+    HzCarouselResource.NAMESPACE = "HzCarouselResource";
+    HzCarouselResource.ON_SLICK_AFTER_CHANGE = "afterChange";
+    HzCarouselResource.ON_SLICK_BEFORE_CHANGE = "beforeChange";
+    HzCarouselResource.ON_SLICK_INIT = "init";
+    HzCarouselResource.ON_SLICK_REINIT = "reInit";
+    HzCarouselResource.CLASS_ACTIVED = "hz-carousel--actived";
+    HzCarouselResource.SLICK_PREFIX = "slick";
+    HzCarouselResource._SLICK_DEFAULTS = {
+        adaptiveHeight: true,
+        infinite: false,
+        initialSlide: 0
+    };
+    HzCarouselResource = HzCarouselResource_1 = __decorate([
+        core_1.Resource({
+            name: "HzCarousel",
+            dependencies: [
+                core_1.$,
+                core_1.EventEmitterFactory,
+                core_1.DataOptions
+            ]
+        })
+    ], HzCarouselResource);
     return HzCarouselResource;
+    var HzCarouselResource_1;
 }(core_1.ResourceController));
-HzCarouselResource.NAMESPACE = "HzCarouselResource";
-HzCarouselResource.ON_SLICK_AFTER_CHANGE = "afterChange";
-HzCarouselResource.ON_SLICK_BEFORE_CHANGE = "beforeChange";
-HzCarouselResource.ON_SLICK_INIT = "init";
-HzCarouselResource.ON_SLICK_REINIT = "reInit";
-HzCarouselResource.CLASS_ACTIVED = "hz-carousel--actived";
-HzCarouselResource.SLICK_PREFIX = "slick";
-HzCarouselResource._SLICK_DEFAULTS = {
-    adaptiveHeight: true,
-    infinite: false,
-    initialSlide: 0
-};
-HzCarouselResource = HzCarouselResource_1 = __decorate([
-    core_1.Resource({
-        name: "HzCarousel",
-        dependencies: [
-            core_1.$,
-            core_1.EventEmitterFactory,
-            core_1.DataOptions
-        ]
-    })
-], HzCarouselResource);
 exports.HzCarouselResource = HzCarouselResource;
-var HzCarouselResource_1;
 //# sourceMappingURL=HzCarouselResource.js.map

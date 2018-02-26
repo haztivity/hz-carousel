@@ -8,8 +8,10 @@ import {
     ResourceController,
     EventEmitterFactory,
     ScormService,
-    DataOptions
-} from "@haztivity/core/index";
+    DataOptions,
+    EventEmitter,
+    PageController
+} from "@haztivity/core";
 import "slick-carousel";
 export interface ISlideState{
     visited:boolean;
@@ -32,6 +34,7 @@ export class HzCarouselResource extends ResourceController {
     public static readonly ON_SLICK_REINIT = "reInit";
     public static readonly CLASS_ACTIVED = "hz-carousel--actived";
     protected static readonly SLICK_PREFIX = "slick";
+    protected _eventEmitter:EventEmitter;
     protected _slickOptions: any;
     protected _slickInstance: any;
     protected _slideState:ISlideState[];
@@ -56,15 +59,22 @@ export class HzCarouselResource extends ResourceController {
     public init(options: any, config?: any): any {
         this._options = options;
         this._config = config;
+        this._eventEmitter = this._EventEmitterFactory.createEmitter();
         this._assignEvents();
         this.refresh();
     }
-
+    protected _onPageShown(e){
+        let instance = e.data.instance;
+        if(instance._slickInstance){//if slick exists, destroy the instance
+            instance._$element.slick("setPosition");
+        }
+    }
     /**
      * Asigna los manejadores de eventos
      * @private
      */
     protected _assignEvents() {
+        this._eventEmitter.globalEmitter.on(PageController.ON_SHOWN,{instance:this},this._onPageShown);
         this._$element.off("." + HzCarouselResource.NAMESPACE)
             .on(
                 `${HzCarouselResource.ON_SLICK_BEFORE_CHANGE}.${HzCarouselResource.NAMESPACE}`,

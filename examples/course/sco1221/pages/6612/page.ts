@@ -2,10 +2,10 @@
  * @license
  * Copyright Davinchi. All Rights Reserved.
  */
-import {PageFactory, PageRegister, PageController,ResourceManager} from "@haztivity/core/index";
+import {PageFactory, PageRegister, PageController,ResourceManager} from "@haztivity/core";
 import * as Prism "prismjs";
 import "prismjs/components/prism-typescript";
-import "prismjs/components/prism-jade";
+import "prismjs/components/prism-pug";
 import template from "./page.pug";
 import {HzCarouselResource} from "../../../resources/hz-carousel/HzCarousel";
 import "../../../resources/hz-carousel/assets/styles/hz-carousel.structure.scss";
